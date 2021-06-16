@@ -7,5 +7,5 @@ const FPS = 48;
 const STARVATION_TIME = 200;
 
 const NB_MUTATIONS = 3;
-const CHANCE_MUTATION = 0.3;
-const ELITISM = Math.round(0.15* NB_GAMES);
+const CHANCE_MUTATION = 0.5;
+const ELITISM = Math.round(0.2 * NB_GAMES);
