@@ -1,10 +1,46 @@
 <html>
     <head>
-        <title>Snake AI - A genetic algorithm showing the evolution of a snake</title>
+        <title>
+            Snake AI - A Genetic Algorithm that learns how to play
+        </title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <script src="src/food.js"></script>
+        <div id="settings">
+            <h1>Settings</h1>
+            <br>
+            <p>Number of games: <span id="nbGamesSettings">96</span></p>
+            <p>Size of a grid: <span id="gameSize">100</span></p>
+            <p>Pixel size: <span id="pixelSize">5</span></p>
+            <p>FPS: <span id="fps"></span>45</p>
+            <p>Starvation: <span id="starvation">200</span></p>
+            <p>Mutation rate: <span id="mutRate">50</span>%</p>
+            <p>Mutation amount: <span id="mutSize">3</span></p>
+            <p>Elitism: <span id="elitism">20</span>%</p>
+        </div>
+
+        <div id="game">
+            <div id="games"></div>
+            <div id="data">
+                <div id="status">
+                    <p>Generation : <span id="generation">0</span></p>
+                    <p><span id="nbAlive">0</span> of <span id="nbGames">0</span> alive</p>
+                    <p>Highscore : <span id="highscore">0</span></p>
+                </div>
+            </div>
+            <div id="chart"></div>
+        </div>
+        
+        <script src="include/frappe-charts.min.iife.js"></script>
+        <script src="include/p5.min.js"></script>
+        <script src="include/neataptic.min.js"></script>
+        
+        <script src="src/settings.js"></script>
         <script src="src/snake.js"></script>
+        <script src="src/food.js"></script>
         <script src="src/game.js"></script>
-    </body>
+        <script src="src/environment.js"></script>
+        <script src="src/main.js"></script>
+      </div>
+      </body>
 </html>

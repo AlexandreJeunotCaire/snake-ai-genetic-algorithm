@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #212121;
+}
+
+#settings {
+  width: 13%;
+  height: 100%;
+  float: left;
+  background-color: #303030;
+}
+
+#settings h1 {
+  color: #fff;
+}
+
+#settings p {
+  color: rgba(255, 255, 255, 0.753);
+  font-size: 20;
+}
+
+#game {
+  width: 87%;
+  float: right;
+}
+
+#wrapper {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5;
+  float: top;
+}
+
+#data {
+  width: 100%;
+}
+
+
+
+
+#chart {
+  width: 100%;
+}
+
+#status {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+#status p {
+  color: #EEE;
+  display: inline-block;
+  width: 33%;
+  font-size: 18;
+}
+
+canvas {
+  border: 1px solid #EEE;
+  margin: 0 1px 1px 0;
+}

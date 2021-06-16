@@ -1,6 +1,6 @@
-class Food {
-    constructor() {
-        this.x = 0;
-        this.y = 0;
+class Apple {
+    constructor(game) {
+        const possible = game.freeSpaces();
+        this.position = possible[Math.floor(Math.random() * possible.length)];
     }
 }
