@@ -2,7 +2,7 @@ const NB_GAMES = 16 * 5;
 const GRID_SIZE = 100;
 const PIXEL = 5;
 const GAME_ROW_SIZE = GRID_SIZE / PIXEL;
-const FPS = 45;
+const FPS = 48;
 
 const STARVATION_TIME = 200;
 
