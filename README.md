@@ -87,4 +87,5 @@ Vous pouvez trouver une démonstration de ce programme sur mon site : https://je
 
 ## Remerciements
 
-- [zonetti](https://github.com/zonetti/snake-neural-network) a réalisé un travail similaire qui m'a permis de réaliser **la partie graphique de ce projet**, que j'ignorais comment aborder.
+- [CodeBullet](https://www.youtube.com/watch?v=3bhP7zulFfY) pour le projet
+- [zonetti](https://github.com/zonetti/snake-neural-network) pour la **partie graphique**, que j'ignorais comment aborder.
