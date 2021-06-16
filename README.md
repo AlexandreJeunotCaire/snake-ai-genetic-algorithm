@@ -12,7 +12,7 @@
 
 Programme <b>personnel</b> développé en `Javascript` permettant de visualiser un algorithme génétique jouant au jeu "Snake".
 
-A chaque génération, **96** snakes sont générés et cherchent à collecter le maximum de pommes, placées aléatoireement sur la map. A la fin d'une génération, les meilleurs serpents (par défaut 20% d'entre eux) sont sélectionnés et subissent des mutations, donnant naissance à une nouvelle génération. La nouvelle génération ainsi que les vainqueurs sont alors remis en jeu.
+A chaque génération, **80** snakes sont générés et cherchent à collecter le maximum de pommes, placées aléatoireement sur la map. A la fin d'une génération, les meilleurs serpents (par défaut 20% d'entre eux) sont sélectionnés et subissent des mutations, donnant naissance à une nouvelle génération. La nouvelle génération ainsi que les vainqueurs sont alors remis en jeu.
 
 Cela permet de créer petit à petit des serpents "comprenant" les objectifs du jeu et qui s'améliorent au fil du temps.
 
