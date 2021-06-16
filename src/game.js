@@ -12,13 +12,13 @@ class Game {
             }
         }
 
-        this.graph = new p5(p => {
-            p.setup = function() {
+        this.sketch = new p5(p => {
+            p.setup = () => {
                 p.frameRate(FPS);
                 p.createCanvas(GRID_SIZE, GRID_SIZE);
             }
       
-            p.drawFood = function() {
+            p.drawFood = () => {
                 p.fill('red');
                 p.rect(
                     PIXEL * (this.food.position[0] - 1),
@@ -28,10 +28,10 @@ class Game {
                 );
             }
       
-            p.drawSnake = function() {
+            p.drawSnake = () => {
                 p.noStroke()
                 let highscore = document.getElementById("highscore").innerHTML;
-                let color = this.snake.ai.score > highscore ? '#00FFFF' : '#39FF14';
+                let color = this.snake.ai.score > highscore ? '#00FFFF': '#39FF14';
 
                 let opacityInt = 255 - 200 * this.snake.uselessTurns / STARVATION_TIME;
                 let opacity = opacityInt.toString(16);
@@ -48,33 +48,33 @@ class Game {
                 });
             }
       
-            p.draw = function() {
+            p.draw = () => {
                 if (!this.onGoing) {
                     p.background('#202020');
                     p.fill(255);
                     p.textSize(20);
                     p.text(this.snake.ai.score.toString(), 45, 55);
-                    return;
+                } else {
+      
+                    p.background('#424242');
+        
+                    this.snake.move();
+        
+                    if (this.snake.isEating) {
+                        this.food = new Apple(this);
+                    }
+        
+                    this.onGoing = !this.snake.isDead(); 
+        
+                    if (!this.onGoing) {
+                        return this.environment.end()
+                    }
+        
+                    p.drawSnake()
+                    p.drawFood()
+        
+                    this.turns++
                 }
-      
-                p.background('#424242');
-      
-                this.snake.move();
-      
-                if (this.snake.isEating) {
-                    this.food = new Apple(this);
-                }
-      
-                this.onGoing = !this.snake.isDead(); 
-      
-                if (!this.onGoing) {
-                    return this.environment.end()
-                }
-      
-                p.drawSnake()
-                p.drawFood()
-      
-                this.turns++
             }
         }, 'games')
     }
