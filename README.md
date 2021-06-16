@@ -28,6 +28,14 @@ A sa mort, le nombre de pommes mangées par le serpent sera affiché.
 
 <img src="./img/score.png" alt="Score of a snake" style="margin: auto;"/>
 
+### Mourir de faim
+
+Enfin, une condition a été ajoutée pour éviter les serpents qui tourneraient en rond suivant une boucle infinie. A chaque fois qu'un serpent fait un mouvement l'éloignant de la pomme, sa faim augmente. Au bout d'un certain nombre de mouvements "mauvais" sans avoir mangé une pomme pour réinitialiser sa satiété, le serpent mourra.
+
+Visuellement, cette faim se traduit par l'opacité. Un serpent mourant sera de plus en plus transparent.
+
+<img src="./img/hungry.gif" alt="A snake dying of hunger" style="margin: auto;"/>
+
 ## Installation
 
 ### Récupération des sources
@@ -45,7 +53,6 @@ Ce programme a été réalisé à l'aide de :
 - [neataptic.js](https://wagenaartje.github.io/neataptic/)
 - [frappe-chart.js](https://frappe.io/charts)
 
-###
 
 ## IA
 
@@ -80,4 +87,4 @@ Vous pouvez trouver une démonstration de ce programme sur mon site : https://je
 
 ## Remerciements
 
-- [zonetti](https://github.com/zonetti/snake-neural-network) a réalisé un travail similaire qui m'a permis de réaliser la partie graphique de ce projet, que j'ignorais comment aborder.
+- [zonetti](https://github.com/zonetti/snake-neural-network) a réalisé un travail similaire qui m'a permis de réaliser **la partie graphique de ce projet**, que j'ignorais comment aborder.
