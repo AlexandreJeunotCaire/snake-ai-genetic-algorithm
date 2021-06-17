@@ -60,14 +60,15 @@ Ce programme a été réalisé à l'aide de :
 
 L'IA, créée avec [neataptic.js](https://wagenaartje.github.io/neataptic/), prend les paramètres suivants :
 - La pomme est-elle située devant le serpent ?
-- La pomme est-elle située à la droite du serpent ?
-- La pomme est-elle située à la gauche du serpent ?
+- L'angle entre la pomme et le serpent (pour l'instant indique juste si la pomme est à droite ou à gauche, mais on pourrait éventuellement affiner ça avec de la trigonométrie)
 - Y a-t-il un obstacle situé immédiatement devant le serpent ?
 - Y a-t-il un obstacle situé immédiatement à la gauche du serpent ?
 - Y a-t-il un obstacle situé immédiatement à la droite du serpent ?
-- La distance normalisée entre le serpent et le premier obstacle situé devant lui
+- La distance normalisée (dist / taille de la map) entre le serpent et le premier obstacle situé devant lui
 - La distance normalisée entre le serpent et le premier obstacle situé à sa droite
 - La distance normalisée entre le serpent et le premier obstacle situé à sa gauche
+
+Pour l'instant, l'ajout des distances normalisées ne semble pas avoir un réel impact sur les performances en jeu du serpent, qui semblent se stabiliser entre 40 et 60 points). Toutefois, je me dis que cela ne peut pas faire plus de mal de rajouter des données comme cela, car peut-être qu'un jour le hasard de la génétique entraînera la création d'un serpent capable de "comprendre" qu'il y a plus de chances de se coincer dans sa propre queue si l'on tourne du côté le plus proche d'un obstacle.
 
 L'IA renvoie un vecteur de deux valeurs contenant la décision de tourner à gauche ou à droite (si les deux valeurs sont à 0, le serpent continuera tout droit).
 
