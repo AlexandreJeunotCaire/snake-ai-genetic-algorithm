@@ -35,6 +35,11 @@ class Environment {
   
         this.chart.data.labels.push(this.ai.generation.toString());
         let max = this.ai.getFittest().score;
+        if (DECREASE_MUTATION_RATE && max > 50) {
+            this.ai.mutationRate = CHANCE_MUTATION - 0.2;
+        } else {
+            this.ai.mutationRate = CHANCE_MUTATION;
+        }
         if (max > champion) {
             champion = max;
             document.getElementById('highscore').innerHTML = champion;
