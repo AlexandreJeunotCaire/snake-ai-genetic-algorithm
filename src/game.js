@@ -4,7 +4,6 @@ class Game {
         this.onGoing = false;
         this.grid = [];
         this.snake = new Snake(this);
-        this.turns = 0;
 
         for (let x = 0; x < GAME_ROW_SIZE; x++) {
             for (let y = 0; y < GAME_ROW_SIZE; y++) {
@@ -70,10 +69,9 @@ class Game {
                         return this.environment.end()
                     }
         
-                    p.drawSnake()
-                    p.drawFood()
+                    p.drawSnake();
+                    p.drawFood();
         
-                    this.turns++
                 }
             }
         }, 'games')
@@ -88,7 +86,6 @@ class Game {
     }
       
     start() {
-        this.turns = 0;
         this.snake.init();
         this.food = new Apple(this);
         this.onGoing = true;
