@@ -12,7 +12,9 @@
 
 Programme <b>personnel</b> développé en `Javascript` afin de développer mes compétences dans ce langage permettant de visualiser un algorithme génétique jouant au jeu "Snake".
 
-A chaque génération, **80** snakes sont générés et cherchent à collecter le maximum de pommes, placées aléatoireement sur la map. A la fin d'une génération, les meilleurs serpents (par défaut 20% d'entre eux) sont sélectionnés et subissent des mutations, donnant naissance à une nouvelle génération. La nouvelle génération ainsi que les vainqueurs sont alors remis en jeu.
+A chaque génération, **96** snakes sont générés et cherchent à collecter le maximum de pommes, placées aléatoireement sur la map. A la fin d'une génération, les meilleurs serpents (par défaut 20% d'entre eux) sont sélectionnés et subissent des mutations, donnant naissance à une nouvelle génération. La nouvelle génération ainsi que les vainqueurs sont alors remis en jeu.
+
+Le paramètre `DECREASE_MUTATION_RATE` a pour ambition d'affiner l'évolution des serpents une fois la barre du score de 50 passé. Il fait passer le taux de mutation de `CHANCE_MUTATION` (par défaut 0.5) à `CHANCE_MUTATION - 0.2`.
 
 Cela permet de créer petit à petit des serpents "comprenant" les objectifs du jeu et qui s'améliorent au fil du temps.
 
@@ -27,6 +29,8 @@ Remarque : pour faciliter la compréhension du jeu, un serpent particulièrement
 A sa mort, le nombre de pommes mangées par le serpent sera affiché.
 
 <img src="./img/score.png" alt="Score of a snake" style="margin: auto;"/>
+
+Remarque : les grilles sont relativement petites. Cela contribue à réduire le score maximal atteignable (le serpent a plus de chances de se rentrer dedans). Pour changer cela, n'hésitez pas à travailler sur le paramètre `GRID_SIZE` !
 
 ### Mourir de faim
 

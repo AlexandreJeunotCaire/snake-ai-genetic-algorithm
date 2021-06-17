@@ -40,6 +40,7 @@ class Environment {
         } else {
             this.ai.mutationRate = CHANCE_MUTATION;
         }
+        document.getElementById("mutRate").innerHTML = this.ai.mutationRate;
         if (max > champion) {
             champion = max;
             document.getElementById('highscore').innerHTML = champion;
